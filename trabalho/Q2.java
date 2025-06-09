@@ -5,6 +5,7 @@ public class Q2 {
         int horastrabalhadas,valordahora,salariobruto;
         double salariomenosinss,impostoderenda,salarioliquido,inss;
         String aux = "";
+        //onde river esse nomes pode mudar
         do{
             aux = JOptionPane.showInputDialog(null,"Quantas horas foram trabalhadas no mes?");
             horastrabalhadas = Integer.parseInt(aux);

@@ -2,41 +2,42 @@ package trabalho;
 import javax.swing.JOptionPane;
 public class Q1 {
     public static void main(String[] args) {
-        String aux = "", opiniao = "";
-        float proc_A = 0,proc_B = 0, proc_C = 0,proc_D = 0,proc_E=0,med_idade = 0;
-        int idade = 0, pessoas = 0;
+        String aux = "", op = "";
+        float porc_A = 0,porc_B = 0, porc_C = 0,porc_D = 0,porc_E=0,m_id = 0;
+        int id = 0, p = 0;
+        //onde river esse nomes pode mudar
         do{
             aux = JOptionPane.showInputDialog(null,"qual sua idade?");
-            idade = Integer.parseInt(aux);
-            if (idade<0) {
+            id = Integer.parseInt(aux);
+            if (id<0) {
                 break;
             }
-            med_idade = med_idade + idade;
-            opiniao = JOptionPane.showInputDialog(null,"qual sua opinao sobre esse filme:\n A(otima)\n B(Bom)\n C(Regular)\n D(Ruim)\n E(Pessima)");
-            switch (opiniao) {
+            m_id = m_id + id;
+            op = JOptionPane.showInputDialog(null,"qual sua opinao sobre esse filme:\n A(otima)\n B(Bom)\n C(Regular)\n D(Ruim)\n E(Pessima)");
+            switch (op) {
                 case "a":
-                    proc_A++;break;
+                    porc_A++;break;
                 case "b":
-                    proc_B++;break;
+                    porc_B++;break;
                 case "c":
-                    proc_C++;break;
+                    porc_C++;break;
                 case "d":
-                    proc_D++;break;
+                    porc_D++;break;
                 case "e":
-                    proc_E++;break;
+                    porc_E++;break;
                 default:
                     JOptionPane.showMessageDialog(null, "insira uma opinao valida");continue;
             }
-            pessoas++;
+            p++;
         }while(true);
-        med_idade = (int)med_idade/pessoas;
-        proc_A = (proc_A*100)/pessoas;
-        proc_B = (proc_B*100)/pessoas;
-        proc_C = (proc_C*100)/pessoas;
-        proc_D = (proc_D*100)/pessoas;
-        proc_E = (proc_E*100)/pessoas;
-        JOptionPane.showMessageDialog(null, "Respoderam "+ pessoas+" pessoas essa pesquisa");
-        JOptionPane.showMessageDialog(null, "A media de idade e igual a: " + med_idade);
-        JOptionPane.showMessageDialog(null, "A porcentagem de A: "+proc_A+"%\nA porcentagem de B: "+proc_B+"%\nA porcentagem de C: "+proc_C+"%\nA porcentagem de D: "+proc_D+"%\nA porcentagem de E: "+proc_E+"%");
+        m_id = (int)m_id/p;
+        porc_A = (porc_A*100)/p;
+        porc_B = (porc_B*100)/p;
+        porc_C = (porc_C*100)/p;
+        porc_D = (porc_D*100)/p;
+        porc_E = (porc_E*100)/p;
+        JOptionPane.showMessageDialog(null, "Respoderam "+ p+" p essa pesquisa");
+        JOptionPane.showMessageDialog(null, "A media de id e igual a: " + m_id);
+        JOptionPane.showMessageDialog(null, "A porcentagem de A: "+porc_A+"%\nA porcentagem de B: "+porc_B+"%\nA porcentagem de C: "+porc_C+"%\nA porcentagem de D: "+porc_D+"%\nA porcentagem de E: "+porc_E+"%");
     }    
 }
